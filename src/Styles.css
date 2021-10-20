@@ -1,8 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700;900&display=swap');
+
+* {
+  font-family: 'Noto Sans Mono', monospace;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+h1 {
+  font-weight: 900;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  color: #fff;
+}
+
 input {
-    width: 60px;
+    width: 150px;
+    height: 28px;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    margin-right: 10px;
 }
 
 select {
-    width: 180px;
+    width: 260px;
+    height: 28px;
+    font-size: 18px;
     text-align: center;
+    justify-content: center;
+    border: none;
+}
+
+.from-value {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.to-value {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.div-main {
+  width: 640px;
+  height: 97vh;
+  background-color: #222;
+  margin: 15px auto;
+}
+
+@media (max-width: 800px) {
+  .div-main {
+    width: 400px;
+    height: 97vh;
+    max-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 10px auto;
+  }
+
+  input {
+    width: 120px;
+    height: 28px;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    margin-right: 10px;
+  }
+
+  select {
+    width: 240px;
+    height: 28px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .div-main {
+    width: 360px;
+    height: 97vh;
+    max-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 10px auto;
+  }
+
+  input {
+    width: 120px;
+    height: 28px;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    margin-right: 5px;
+  }
+
+  select {
+    width: 220px;
+    height: 28px;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .div-main {
+    width: 310px;
+    height: 97vh;
+    max-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 10px auto;
+  }
+
+  input {
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    justify-content: center;
+    font-size: 13.5px;
+    font-weight: 700;
+    border: none;
+    margin-right: 5px;
+  }
+
+  select {
+    width: 195px;
+    height: 28px;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+  }
 }

@@ -32,7 +32,7 @@ export default function App() {
         setFromCurrency(data.base);
         setToCurrency(firstCurrency);
         setExchangeRate(data.rates[firstCurrency]);
-      })
+      });
   }, []);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function App() {
       .then(res => res.json())
       .then(data => {
         setOptionsCurrencies([...Object.values(data)])
-      })
+      });
   }, []);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function App() {
       fetch(`https://api.frankfurter.app/latest?amount=${value}&from=${fromCurrency}&to=${toCurrency}`)
         .then(resp => resp.json())
         .then(data => setExchangeRate(data.rates[toCurrency]))
-    }
+    };
   }, [fromCurrency, toCurrency]);
 
   const handleFromValueChange = (e) => {
@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className="div-main">
       <Title />
       <FromValue
         fromValue={fromValue} handleFromValueChange={handleFromValueChange} fromCurrency={fromCurrency}
@@ -72,6 +72,6 @@ export default function App() {
         toValue={toValue} handleToValueChange={handleToValueChange} toCurrency={toCurrency}
         setToCurrency={setToCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
       />
-    </>
+    </div>
   );
 };

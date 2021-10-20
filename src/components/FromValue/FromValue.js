@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function FromValue({ fromValue, handleFromValueChange, fromCurrency, setFromCurrency, optionsValues, optionsCurrencies }) {
     return (
-        <div>
+        <div className="from-value">
             <input type="number" value={fromValue || ''} onChange={handleFromValueChange} />
             <select value={fromCurrency} onChange={e => setFromCurrency(e.target.value)}>
                 {optionsValues.map((option, val) => (
