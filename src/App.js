@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import './App.css';
 
 export default function App() {
   const [fromCurrency, setFromCurrency] = useState();
   const [toCurrency, setToCurrency] = useState();
   const [value, setValue] = useState(1);
   const [options, setOptions] = useState([]);
+  const [options2, setOptions2] = useState([]);
   const [exchangeRate, setExchangeRate] = useState();
   const [valueFromCurrency, setValueFromCurrency] = useState(true);
 
@@ -19,7 +21,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    fetch(`https://api.frankfurter.app/latest`)
+    fetch(`https://api.frankfurter.app/latest?from=AUD`)
       .then(res => res.json())
       .then(data => {
         const firstCurrency = Object.keys(data.rates)[0];
@@ -27,6 +29,14 @@ export default function App() {
         setFromCurrency(data.base);
         setToCurrency(firstCurrency);
         setExchangeRate(data.rates[firstCurrency]);
+      })
+  }, []);
+
+  useEffect(() => {
+    fetch(`https://api.frankfurter.app/currencies`)
+      .then(res => res.json())
+      .then(data => {
+        setOptions2([...Object.values(data)])
       })
   }, []);
 
@@ -52,18 +62,19 @@ export default function App() {
     <>
       <h1>Currency Converter</h1>
       <div>
-        <input type="number" value={fromValue || ''} onChange={handleFromValueChange} className="input" />
+        <input type="number" value={fromValue || ''} onChange={handleFromValueChange} />
         <select value={fromCurrency} onChange={e => setFromCurrency(e.target.value)}>
-          {options.map(option => (
-            <option key={option} value={option}>{option}</option>
-            ))}
+          {options.map((option, val) => (
+            <option key={option} value={option}>{options2[val]}</option>
+          ))}
         </select>
+
       </div>
       <div>
-        <input type="number" value={toValue || ''} onChange={handleToValueChange} className="input" />
+        <input type="number" value={toValue || ''} onChange={handleToValueChange} />
         <select value={toCurrency} onChange={e => setToCurrency(e.target.value)}>
-          {options.map(option => (
-            <option key={option} value={option}>{option}</option>
+          {options.map((option, val) => (
+            <option key={option} value={option}>{options2[val]}</option>
           ))}
         </select>
       </div>
