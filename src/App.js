@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './Styles.css';
+import Title from './components/Title/Title';
+import FromValue from './components/FromValue/FromValue';
+import ToValue from './components/ToValue/ToValue';
 
 export default function App() {
   const [fromCurrency, setFromCurrency] = useState();
   const [toCurrency, setToCurrency] = useState();
   const [value, setValue] = useState(1);
-  const [options, setOptions] = useState([]);
-  const [options2, setOptions2] = useState([]);
+  const [optionsValues, setOptionsValues] = useState([]);
+  const [optionsCurrencies, setOptionsCurrencies] = useState([]);
   const [exchangeRate, setExchangeRate] = useState();
   const [valueFromCurrency, setValueFromCurrency] = useState(true);
 
@@ -25,7 +28,7 @@ export default function App() {
       .then(res => res.json())
       .then(data => {
         const firstCurrency = Object.keys(data.rates)[0];
-        setOptions([data.base, ...Object.keys(data.rates)]);
+        setOptionsValues([data.base, ...Object.keys(data.rates)]);
         setFromCurrency(data.base);
         setToCurrency(firstCurrency);
         setExchangeRate(data.rates[firstCurrency]);
@@ -36,7 +39,7 @@ export default function App() {
     fetch(`https://api.frankfurter.app/currencies`)
       .then(res => res.json())
       .then(data => {
-        setOptions2([...Object.values(data)])
+        setOptionsCurrencies([...Object.values(data)])
       })
   }, []);
 
@@ -60,24 +63,15 @@ export default function App() {
 
   return (
     <>
-      <h1>Currency Converter</h1>
-      <div>
-        <input type="number" value={fromValue || ''} onChange={handleFromValueChange} />
-        <select value={fromCurrency} onChange={e => setFromCurrency(e.target.value)}>
-          {options.map((option, val) => (
-            <option key={option} value={option}>{options2[val]}</option>
-          ))}
-        </select>
-
-      </div>
-      <div>
-        <input type="number" value={toValue || ''} onChange={handleToValueChange} />
-        <select value={toCurrency} onChange={e => setToCurrency(e.target.value)}>
-          {options.map((option, val) => (
-            <option key={option} value={option}>{options2[val]}</option>
-          ))}
-        </select>
-      </div>
+      <Title />
+      <FromValue
+        fromValue={fromValue} handleFromValueChange={handleFromValueChange} fromCurrency={fromCurrency}
+        setFromCurrency={setFromCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
+      />
+      <ToValue
+        toValue={toValue} handleToValueChange={handleToValueChange} toCurrency={toCurrency}
+        setToCurrency={setToCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
+      />
     </>
   );
 };
