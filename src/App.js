@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
-import { default as Main } from './assets/img/Main.svg';
 import Title from './components/Title/Title';
 import FromValue from './components/FromValue/FromValue';
 import ToValue from './components/ToValue/ToValue';
+import ImageBackground from './components/Image/ImageBackground';
 
 export default function App() {
   const [fromCurrency, setFromCurrency] = useState();
@@ -73,7 +73,7 @@ export default function App() {
         toValue={toValue} handleToValueChange={handleToValueChange} toCurrency={toCurrency}
         setToCurrency={setToCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
       />
-      <img src={Main} alt="" className="img-background" />
+      <ImageBackground />
     </div>
   );
 };

@@ -10,14 +10,8 @@
 .div-main {
   width: 640px;
   height: 97vh;
-  background-color: #222;
+  background-color: #111;
   margin: 15px auto;
-}
-
-.img-background {
-  width: 90%;
-  margin-left: 32px;
-  margin-top: 180px;
 }
 
 @media (max-width: 800px) {
@@ -26,12 +20,6 @@
     height: 97vh;
     max-height: 100%;
     margin: 10px auto;
-  }
-
-  .img-background {
-    width: 90%;
-    margin-left: 19px;
-    margin-top: 50px;
   }
 }
 
@@ -42,12 +30,6 @@
     max-height: 100%;
     margin: 10px auto;
   }
-
-  .img-background {
-    width: 90%;
-    margin-left: 19px;
-    margin-top: 10px;
-  }
 }
 
 @media (max-width: 320px) {
@@ -56,11 +38,5 @@
     height: 97vh;
     max-height: 100%;
     margin: 10px auto;
-  }
-
-  .img-background {
-    width: 70%;
-    margin-left: 45px;
-    margin-top: 0px;
   }
 }
