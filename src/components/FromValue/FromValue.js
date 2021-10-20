@@ -1,4 +1,5 @@
 import React from 'react';
+import './Styles.css';
 
 export default function FromValue({ fromValue, handleFromValueChange, fromCurrency, setFromCurrency, optionsValues, optionsCurrencies }) {
     return (

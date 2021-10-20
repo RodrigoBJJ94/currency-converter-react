@@ -1,4 +1,5 @@
 import React from 'react';
+import './Styles.css';
 
 export default function ToValue({ toValue, handleToValueChange, toCurrency, setToCurrency, optionsValues, optionsCurrencies }) {
     return (
