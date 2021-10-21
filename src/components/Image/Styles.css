@@ -1,29 +1,29 @@
 .img-background {
-    width: 90%;
-    margin-left: 32px;
-    margin-top: 180px;
+  width: 90%;
+  margin-left: 32px;
+  margin-top: 180px;
 }
 
 @media (max-width: 800px) {
-    .img-background {
-      width: 90%;
-      margin-left: 19px;
-      margin-top: 50px;
-    }
+  .img-background {
+    width: 90%;
+    margin-left: 19px;
+    margin-top: 50px;
+  }
 }
   
 @media (max-width: 400px) {
-    .img-background {
-      width: 90%;
-      margin-left: 19px;
-      margin-top: 10px;
-    }
+  .img-background {
+    width: 90%;
+    margin-left: 19px;
+    margin-top: 10px;
+  }
 }
   
 @media (max-width: 320px) {
-    .img-background {
-      width: 70%;
-      margin-left: 45px;
-      margin-top: 0px;
-    }
+  .img-background {
+    width: 70%;
+    margin-left: 45px;
+    margin-top: 0px;
+  }
 }
