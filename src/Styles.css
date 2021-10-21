@@ -14,9 +14,25 @@
   margin: 15px auto;
 }
 
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.swal-button {
+  background-color: #f00;
+}
+
+.swal-button:focus {
+  box-shadow: none;
+}
+
+.swal-text {
+  font-weight: bold;
+}
+
 @media (max-width: 800px) {
   .div-main {
-    width: 406px;
+    width: 408px;
     height: 97vh;
     max-height: 100%;
     margin: 10px auto;
@@ -25,7 +41,7 @@
 
 @media (max-width: 400px) {
   .div-main {
-    width: 368px;
+    width: 370px;
     height: 97vh;
     max-height: 100%;
     margin: 10px auto;

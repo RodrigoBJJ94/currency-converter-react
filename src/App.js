@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
+import swal from 'sweetalert';
 import Title from './components/Title/Title';
 import FromValue from './components/FromValue/FromValue';
 import ToValue from './components/ToValue/ToValue';
@@ -45,10 +46,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (fromCurrency != null && toCurrency != null) {
+    if ((fromCurrency != null && toCurrency != null) && (fromCurrency != toCurrency)) {
       fetch(`https://api.frankfurter.app/latest?amount=${value}&from=${fromCurrency}&to=${toCurrency}`)
         .then(resp => resp.json())
         .then(data => setExchangeRate(data.rates[toCurrency]))
+    } else if ((fromCurrency === toCurrency) && (fromCurrency != null) && (toCurrency != null)){
+      swal('', 'Please choose two different currencies!', 'error');
     };
   }, [fromCurrency, toCurrency]);
 
