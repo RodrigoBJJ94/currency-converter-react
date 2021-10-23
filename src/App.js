@@ -50,7 +50,7 @@ export default function App() {
       fetch(`https://api.frankfurter.app/latest?amount=${value}&from=${fromCurrency}&to=${toCurrency}`)
         .then(resp => resp.json())
         .then(data => setExchangeRate(data.rates[toCurrency]))
-    } else if ((fromCurrency === toCurrency) && (fromCurrency != null) && (toCurrency != null)){
+    } else if ((fromCurrency === toCurrency) && (fromCurrency != null) && (toCurrency != null)) {
       swal('', 'Please choose two different currencies!', 'error');
     };
   }, [fromCurrency, toCurrency]);
@@ -70,12 +70,10 @@ export default function App() {
       <Title />
       <FromValue
         fromValue={fromValue} handleFromValueChange={handleFromValueChange} fromCurrency={fromCurrency}
-        setFromCurrency={setFromCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
-      />
+        setFromCurrency={setFromCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies} />
       <ToValue
         toValue={toValue} handleToValueChange={handleToValueChange} toCurrency={toCurrency}
-        setToCurrency={setToCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
-      />
+        setToCurrency={setToCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies} />
       <ImageBackground />
     </div>
   );
