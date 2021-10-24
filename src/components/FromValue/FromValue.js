@@ -1,7 +1,12 @@
 import React from 'react';
 import './Styles.css';
 
-export default function FromValue({ fromValue, handleFromValueChange, fromCurrency, setFromCurrency, optionsValues, optionsCurrencies }) {
+export default function FromValue({ fromValue, fromCurrency, setFromCurrency, optionsValues, optionsCurrencies, setValue, setValueFromCurrency }) {
+    const handleFromValueChange = (e) => {
+        setValue(e.target.value);
+        setValueFromCurrency(true);
+    };
+
     return (
         <div className="from-value">
             <input type="number" value={fromValue || ''} onChange={handleFromValueChange} />

@@ -55,25 +55,15 @@ export default function App() {
     };
   }, [fromCurrency, toCurrency]);
 
-  const handleFromValueChange = (e) => {
-    setValue(e.target.value);
-    setValueFromCurrency(true);
-  };
-
-  const handleToValueChange = (e) => {
-    setValue(e.target.value);
-    setValueFromCurrency(false);
-  };
-
   return (
     <div className="div-main">
       <Title />
       <FromValue
-        fromValue={fromValue} handleFromValueChange={handleFromValueChange} fromCurrency={fromCurrency}
-        setFromCurrency={setFromCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies} />
+        fromValue={fromValue} fromCurrency={fromCurrency} setFromCurrency={setFromCurrency} optionsValues={optionsValues}
+        optionsCurrencies={optionsCurrencies} setValue={setValue} setValueFromCurrency={setFromCurrency} />
       <ToValue
-        toValue={toValue} handleToValueChange={handleToValueChange} toCurrency={toCurrency}
-        setToCurrency={setToCurrency} optionsValues={optionsValues} optionsCurrencies={optionsCurrencies} />
+        toValue={toValue} toCurrency={toCurrency} setToCurrency={setToCurrency} optionsValues={optionsValues}
+        optionsCurrencies={optionsCurrencies} setValue={setValue} setValueFromCurrency={setValueFromCurrency} />
       <ImageBackground />
     </div>
   );
