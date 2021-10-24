@@ -37,6 +37,10 @@
     max-height: 100%;
     margin: 10px auto;
   }
+
+  .swal-text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -46,6 +50,10 @@
     max-height: 100%;
     margin: 10px auto;
   }
+
+  .swal-text {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -54,5 +62,9 @@
     height: 97vh;
     max-height: 100%;
     margin: 10px auto;
+  }
+
+  .swal-text {
+    font-size: 11px;
   }
 }
