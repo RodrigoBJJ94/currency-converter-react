@@ -59,11 +59,13 @@ export default function App() {
     <div className="div-main">
       <Title />
       <FromValue
-        fromValue={fromValue} fromCurrency={fromCurrency} setFromCurrency={setFromCurrency} optionsValues={optionsValues}
-        optionsCurrencies={optionsCurrencies} setValue={setValue} setValueFromCurrency={setFromCurrency} />
+        fromValue={fromValue} fromCurrency={fromCurrency} setFromCurrency={setFromCurrency}
+        optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
+        setValue={setValue} setValueFromCurrency={setFromCurrency} />
       <ToValue
-        toValue={toValue} toCurrency={toCurrency} setToCurrency={setToCurrency} optionsValues={optionsValues}
-        optionsCurrencies={optionsCurrencies} setValue={setValue} setValueFromCurrency={setValueFromCurrency} />
+        toValue={toValue} toCurrency={toCurrency} setToCurrency={setToCurrency}
+        optionsValues={optionsValues} optionsCurrencies={optionsCurrencies}
+        setValue={setValue} setValueFromCurrency={setValueFromCurrency} />
       <ImageBackground />
     </div>
   );
