@@ -1,0 +1,23 @@
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 15.25vw;
+  margin-left: 0.25vw;
+}
+
+.input-text {
+  color: #FFFFFF;
+}
+
+.input {
+  text-align: center;
+  align-self: center;
+  width: 7vw;
+  height: 3.5vh;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+}

@@ -1,0 +1,31 @@
+.answer-main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 15.25vw;
+  margin-left: 0.25vw;
+}
+
+.answer-text {
+  color: #FFFFFF;
+  margin-right: 1vw;
+}
+
+.answer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7vw;
+  height: 3.5vh;
+  border: none;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+}
+
+.answer {
+  text-align: center;
+  
+  font-size: 18px;
+  font-weight: 700;
+}

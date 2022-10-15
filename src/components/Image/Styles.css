@@ -2,27 +2,3 @@
   width: 90%;
   margin-bottom: 2vh;
 }
-
-@media (max-width: 800px) {
-  .img-background {
-    width: 90%;
-    margin-left: 19px;
-    margin-top: 50px;
-  }
-}
-  
-@media (max-width: 400px) {
-  .img-background {
-    width: 90%;
-    margin-left: 19px;
-    margin-top: 10px;
-  }
-}
-  
-@media (max-width: 320px) {
-  .img-background {
-    width: 70%;
-    margin-left: 45px;
-    margin-top: 0px;
-  }
-}

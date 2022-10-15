@@ -1,7 +1,7 @@
 input {
   text-align: center;
   width: 8vw;
-  height: 3vh;
+  height: 3.5vh;
   border: none;
   border-radius: 3px;
   margin-right: 0.6vw;
@@ -13,7 +13,7 @@ input {
 select {
   text-align: center;
   width: 15vw;
-  height: 3vh;
+  height: 3.5vh;
   border: none;
   border-radius: 3px;
   margin-top: 1vh;
@@ -27,44 +27,22 @@ select {
 
 @media (max-width: 800px) {
   input {
-    width: 120px;
-    height: 28px;
+    width: 30vw;
     font-size: 15px;
   }
   
   select {
-    width: 240px;
-    height: 28px;
-    font-size: 16px;
+    width: 58vw;
+    font-size: 15px;
   }
 }
   
 @media (max-width: 400px) {
   input {
-    width: 120px;
-    height: 28px;
-    font-size: 15px;
-    margin-right: 5px;
-  }
-  
-  select {
-    width: 220px;
-    height: 28px;
-    font-size: 15px;
-  }
-}
-  
-@media (max-width: 320px) {
-  input {
-    width: 100px;
-    height: 28px;
     font-size: 13.5px;
-    margin-right: 5px;
   }
   
   select {
-    width: 195px;
-    height: 28px;
-    font-size: 13px;
+    font-size: 13.5px;
   }
 }

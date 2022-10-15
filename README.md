@@ -1,2 +1,1 @@
-# currency-converter-react
- currency-converter-react
+# Currency Converter developed in React

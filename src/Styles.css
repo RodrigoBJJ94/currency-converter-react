@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700;900&display=swap");
 
 * {
-  font-family: 'Noto Sans Mono', monospace;
+  font-family: "Noto Sans Mono", monospace;
   margin: 0;
   padding: 0;
   outline: 0;
@@ -17,6 +17,11 @@
   margin: 1vh auto;
   border-radius: 5px;
   background-color: #111111;
+}
+
+.div-data {
+  display: flex;
+  flex-direction: column;
 }
 
 .swal-overlay {
@@ -37,39 +42,12 @@
 
 @media (max-width: 800px) {
   .div-main {
-    width: 408px;
-    height: 97vh;
-    max-height: 100%;
-    margin: 10px auto;
+    width: 97vw;
+    height: 98.6vh;
+    margin: 0.7vh auto;
   }
 
   .swal-text {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 400px) {
-  .div-main {
-    width: 370px;
-    height: 97vh;
-    max-height: 100%;
-    margin: 10px auto;
-  }
-
-  .swal-text {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 320px) {
-  .div-main {
-    width: 310px;
-    height: 97vh;
-    max-height: 100%;
-    margin: 10px auto;
-  }
-
-  .swal-text {
-    font-size: 11px;
   }
 }
