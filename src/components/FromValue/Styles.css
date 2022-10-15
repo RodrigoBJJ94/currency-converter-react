@@ -1,26 +1,28 @@
 input {
-  width: 150px;
-  height: 28px;
   text-align: center;
   justify-content: center;
+  width: 8vw;
+  height: 3vh;
+  border: none;
+  border-radius: 3px;
+  margin-right: 0.6vw;
   font-size: 18px;
   font-weight: 700;
-  border: none;
-  margin-right: 10px;
 }
 
 select {
-  width: 260px;
-  height: 28px;
-  font-size: 18px;
   text-align: center;
   justify-content: center;
+  width: 15vw;
+  height: 3vh;
   border: none;
+  border-radius: 3px;
+  font-size: 18px;
 }
 
-.from-value {
+.to-value {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 8vh;
 }
 
 @media (max-width: 800px) {

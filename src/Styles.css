@@ -8,10 +8,15 @@
 }
 
 .div-main {
-  width: 640px;
-  height: 97vh;
-  background-color: #111;
-  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 34vw;
+  height: 98vh;
+  margin: 1vh auto;
+  border-radius: 5px;
+  background-color: #111111;
 }
 
 .swal-overlay {
