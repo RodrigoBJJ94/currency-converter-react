@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import Title from "./components/Title/Title";
 import Input from "./components/Input/Input";
 import Selects from "./components/Selects/Selects";
@@ -27,11 +27,14 @@ export default function App() {
         });
     } else if ((initialPrice === "" || initialPrice === "0") &&
       initialCurrency === responseCurrency) {
-      swal("", "Please inform a value and different currencies!");
+      setResponsePrice("");
+      Swal.fire("", "Please inform a value and different currencies!");
     } else if (initialPrice === "" || initialPrice === "0") {
-      swal("", "Please inform a value!");
+      setResponsePrice("");
+      Swal.fire("", "Please inform a value!");
     } else if (initialCurrency === responseCurrency) {
-      swal("", "Please inform different currencies!");
+      setResponsePrice("");
+      Swal.fire("", "Please inform different currencies!");
     };
   }, [initialPrice, initialCurrency, responseCurrency]);
 
@@ -45,12 +48,12 @@ export default function App() {
   }, []);
 
   return (
-    <div className="div-main">
+    <div className="container-main">
       {allCurrenciesSymbols !== undefined
         && allCurrenciesNames !== undefined ?
         <>
           <Title />
-          <div className="div-data">
+          <div className="container-data">
             <Input
               initialPrice={initialPrice}
               setInicialPrice={setInicialPrice}

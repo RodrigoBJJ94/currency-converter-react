@@ -21,3 +21,28 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+@media (max-width: 800px) {
+  .input-container {
+    width: 60vw;
+  }
+
+  .input-text {
+    font-size: 15.5px;
+  }
+
+  .input {
+    width: 22vw;
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .input-text {
+    font-size: 13.5px;
+  }
+
+  .input {
+    font-size: 13.5px;
+  }
+}

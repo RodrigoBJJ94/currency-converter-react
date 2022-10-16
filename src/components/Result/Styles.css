@@ -25,7 +25,34 @@
 
 .answer {
   text-align: center;
-  
   font-size: 18px;
   font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .answer-main-container {
+    width: 60vw;
+  }
+  
+  .answer-container {
+    width: 22vw;
+  }
+
+  .answer-text {
+    font-size: 15.5px;
+  }
+  
+  .answer {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .answer-text {
+    font-size: 13.5px;
+  }
+
+  .answer {
+    font-size: 13.5px;
+  }
 }
