@@ -1,6 +1,12 @@
-import React from 'react';
-import './Styles.css';
+import React from "react";
+import "./Styles.css";
 
 export default function Title() {
-  return <h1 className="title">Currency Converter</h1>
+  return (
+    <div className="titleContainer">
+      <p className="title">
+        Currency Converter
+      </p>
+    </div>
+  );
 };

@@ -3,12 +3,14 @@ import "./Styles.css";
 
 export default function Result({ responsePrice }) {
   return (
-    <div className="answer-main-container">
-      <p className="answer-text">
+    <div className="resultMainContainer">
+      <p className="resultText">
         Result:
       </p>
-      <div className="answer-container">
-        <h1 className="answer">{responsePrice}</h1>
+      <div className="resultContainer">
+        <h1 className="result">
+          {responsePrice}
+        </h1>
       </div>
     </div>
   );

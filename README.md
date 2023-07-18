@@ -1,1 +1,3 @@
-# Currency Converter developed in React
+# Currency Converter
+
+Developed with React, JavaScript and CSS

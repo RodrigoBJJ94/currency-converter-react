@@ -1,4 +1,16 @@
-.img-background {
-  width: 90%;
+.imageBackground {
+  width: 35vw;
   margin-bottom: 2vh;
+}
+
+@media (max-width: 420px) {
+  .imageBackground {
+    width: 65vw;
+  }
+}
+
+@media (max-width: 380px) {
+  .imageBackground {
+    width: 68vw;
+  }
 }

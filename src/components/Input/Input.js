@@ -3,8 +3,8 @@ import "./Styles.css";
 
 export default function Input({ initialPrice, setInicialPrice }) {
   return (
-    <div className="input-container">
-      <p className="input-text">
+    <div className="inputContainer">
+      <p className="inputText">
         Inform a value:
       </p>
       <input

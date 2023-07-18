@@ -1,48 +1,78 @@
-.input-container {
+.inputContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 15.25vw;
-  margin-left: 0.25vw;
+  width: 18vw;
+  margin-bottom: 2.2vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
-.input-text {
+.inputText {
+  font-size: 17px;
+  font-weight: 400;
   color: #FFFFFF;
 }
 
 .input {
   text-align: center;
-  align-self: center;
-  width: 7vw;
-  height: 3.5vh;
+  width: 8vw;
+  height: 4vh;
   border: none;
   border-radius: 3px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
 }
 
-@media (max-width: 800px) {
-  .input-container {
-    width: 60vw;
+@media (max-width: 1400px) {
+  .inputText {
+    font-size: 16px;
   }
-
-  .input-text {
-    font-size: 15.5px;
-  }
-
+  
   .input {
-    width: 22vw;
-    font-size: 15.5px;
+    font-size: 16px;
   }
 }
 
-@media (max-width: 800px) {
-  .input-text {
-    font-size: 13.5px;
+@media (max-width: 1280px) {
+  .inputText {
+    font-size: 15px;
   }
-
+  
   .input {
-    font-size: 13.5px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .inputContainer {
+    width: 54vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  
+  .inputText {
+    font-size: 15px;
+  }
+  
+  .input {
+    width: 22vw;
+    height: 3.5vh;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .inputContainer {
+    width: 54vw;
+  }
+  
+  .inputText {
+    font-size: 14px;
+  }
+  
+  .input {
+    font-size: 14px;
   }
 }

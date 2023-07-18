@@ -4,7 +4,7 @@ import Title from "./components/Title/Title";
 import Input from "./components/Input/Input";
 import Selects from "./components/Selects/Selects";
 import Result from "./components/Result/Result";
-import ImageBackground from "./components/Image/ImageBackground";
+import Image from "./components/Image/Image";
 import "./Styles.css";
 
 export default function App() {
@@ -18,15 +18,20 @@ export default function App() {
   const APIBase = "https://api.frankfurter.app/";
 
   useEffect(() => {
-    if (initialPrice !== "" && initialPrice !== "0" &&
-      initialCurrency !== responseCurrency) {
+    if (
+      initialPrice !== ""
+      && initialPrice !== "0"
+      && initialCurrency !== responseCurrency
+    ) {
       fetch(`${APIBase}latest?amount=${initialPrice}&from=${initialCurrency}&to=${responseCurrency}`)
         .then(res => res.json())
         .then(res => {
           setResponsePrice(Object.values(res.rates)[0]);
         });
-    } else if ((initialPrice === "" || initialPrice === "0") &&
-      initialCurrency === responseCurrency) {
+    } else if (
+      (initialPrice === "" || initialPrice === "0")
+      && initialCurrency === responseCurrency
+    ) {
       setResponsePrice("");
       Swal.fire("", "Please inform a value and different currencies!");
     } else if (initialPrice === "" || initialPrice === "0") {
@@ -48,31 +53,35 @@ export default function App() {
   }, []);
 
   return (
-    <div className="container-main">
-      {allCurrenciesSymbols !== undefined
-        && allCurrenciesNames !== undefined ?
-        <>
-          <Title />
-          <div className="container-data">
-            <Input
-              initialPrice={initialPrice}
-              setInicialPrice={setInicialPrice}
-            />
-            <Selects
-              initialCurrency={initialCurrency}
-              setInicialCurrency={setInicialCurrency}
-              allCurrenciesSymbols={allCurrenciesSymbols}
-              allCurrenciesNames={allCurrenciesNames}
-              responseCurrency={responseCurrency}
-              setResponseCurrency={setResponseCurrency}
-            />
-            <Result
-              responsePrice={responsePrice}
-            />
-          </div>
-          <ImageBackground />
-        </>
-        : null}
+    <div className="containerApp">
+      <div className="containerMain">
+        {
+          allCurrenciesSymbols !== undefined
+            && allCurrenciesNames !== undefined
+            ? <>
+              <Title />
+              <div className="containerData">
+                <Input
+                  initialPrice={initialPrice}
+                  setInicialPrice={setInicialPrice}
+                />
+                <Selects
+                  initialCurrency={initialCurrency}
+                  setInicialCurrency={setInicialCurrency}
+                  allCurrenciesSymbols={allCurrenciesSymbols}
+                  allCurrenciesNames={allCurrenciesNames}
+                  responseCurrency={responseCurrency}
+                  setResponseCurrency={setResponseCurrency}
+                />
+                <Result
+                  responsePrice={responsePrice}
+                />
+              </div>
+              <Image />
+            </>
+            : null
+        }
+      </div>
     </div>
   );
 };

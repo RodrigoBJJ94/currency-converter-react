@@ -1,29 +1,43 @@
-.container-selects {
+.containerSelects {
   display: flex;
   flex-direction: column;
-  margin: 0.5vh auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
 }
 
 .select {
   text-align: center;
-  width: 15.2vw;
-  height: 3.5vh;
+  width: 18vw;
+  height: 4vh;
   border: none;
   border-radius: 3px;
-  margin-top: 1vh;
-  margin: 0.5vh 0.3vw;
-  font-size: 18px;
+  margin-bottom: 1.2vh;
+  font-size: 17px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1400px) {
   .select {
-    width: 60vw;
-    font-size: 15.5px;
+    font-size: 16px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1280px) {
   .select {
-    font-size: 13.5px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .select {
+    width: 54vw;
+    height: 3.5vh;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .select {
+    font-size: 14px;
   }
 }

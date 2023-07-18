@@ -1,23 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap");
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
 
 .title {
-  text-align: center;
-  padding-top: 8vh;
-  padding-bottom: 6vh;
-  font-family: "Montserrat", sans-serif;
   font-size: 50px;
   font-weight: 700;
   color: #FFFFFF;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1400px) {
   .title {
-    font-size: 46px;
+    font-size: 47px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1280px) {
   .title {
-    font-size: 40px;
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 30px;
   }
 }
